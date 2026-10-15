@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Elyvaro</title>
+  <meta name="description" content="Get in touch with Elyvaro, parent company of K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store. Questions, introductions and partnerships.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.elyvaro.com/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Elyvaro">
+  <meta property="og:url" content="https://www.elyvaro.com/contact/">
+  <meta property="og:title" content="Contact - Elyvaro">
+  <meta property="og:description" content="Get in touch with Elyvaro. Questions, introductions and partnerships.">
+  <meta property="og:image" content="https://www.elyvaro.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact - Elyvaro">
+  <meta name="twitter:description" content="Get in touch with Elyvaro. Questions, introductions and partnerships.">
+  <meta name="twitter:image" content="https://www.elyvaro.com/assets/img/og-image.jpg">
+  <meta name="theme-color" content="#E04B26">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>document.documentElement.className = "js";</script>
+</head>
+<body class="pg-contact">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="wordmark" href="/" aria-label="Elyvaro, home">Elyvaro<span class="dot">.</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/k-and-j-beauty/">K and J Beauty</a></li>
+          <li><a href="/modern-lifestyle/">Modern Lifestyle</a></li>
+          <li><a href="/contact/" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="ico ico-menu" aria-hidden="true"><use href="/assets/icons/sprite.svg#menu"></use></svg>
+        <svg class="ico ico-x" aria-hidden="true"><use href="/assets/icons/sprite.svg#x"></use></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+    <div class="mobile" id="mobile-menu" hidden>
+      <a class="m-link" href="/">Home
+        <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+      <a class="m-link" href="/k-and-j-beauty/">K and J Beauty Products
+        <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+      <a class="m-link" href="/modern-lifestyle/">Modern Lifestyle &amp; Discovery Store
+        <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+      <a class="m-link" href="/contact/" aria-current="page">Contact
+        <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- hero -->
+    <section class="hero-c">
+      <div class="wrap">
+        <p class="hero-c__eyebrow rise" style="--d:40ms">Get in touch</p>
+        <h1 class="rise morph" style="--d:120ms">Say <span class="accent">hello</span>.</h1>
+        <p class="rise" style="--d:220ms">Questions, introductions, or partnership enquiries. Everything arrives at the same inbox and is read by a person.</p>
+      </div>
+    </section>
+
+    <!-- form + side -->
+    <section class="section section--sm" aria-labelledby="form-h">
+      <div class="wrap">
+        <h2 id="form-h" class="visually-hidden" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Contact form</h2>
+        <div class="contact-grid">
+          <!--
+            FRONT-END ONLY FORM
+            No backend. On submit, opens the visitor's mail app (mailto:hr@elyvaro.com)
+            with the message pre-filled. No API keys required.
+            To go live with a form backend later (e.g. Web3Forms + Cloudflare Turnstile),
+            swap the form action and add the captcha script in the marked slots below.
+          -->
+          <form class="form reveal-l" data-contact-form novalidate>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <input type="text" id="cf-name" name="name" placeholder=" " required autocomplete="name">
+                <label for="cf-name">Your name</label>
+              </div>
+              <div class="field">
+                <input type="email" id="cf-email" name="email" placeholder=" " required autocomplete="email">
+                <label for="cf-email">Email address</label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field field--select">
+                <select id="cf-subject" name="subject" required>
+                  <option value="General enquiry" selected>General enquiry</option>
+                  <option value="K and J Beauty Products">K and J Beauty Products</option>
+                  <option value="Modern Lifestyle &amp; Discovery Store">Modern Lifestyle &amp; Discovery Store</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Press">Press</option>
+                </select>
+                <label for="cf-subject">Subject</label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <textarea id="cf-message" name="message" placeholder=" " required rows="6"></textarea>
+                <label for="cf-message">Your message</label>
+              </div>
+            </div>
+
+            <!-- honeypot: hidden from humans, catches naive bots -->
+            <div class="hp" aria-hidden="true">
+              <label for="cf-gotcha">Leave this field empty</label>
+              <input type="text" id="cf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!--
+              CAPTCHA SLOT (frontend-only verification gate)
+              Replace this block with Cloudflare Turnstile when a sitekey is available:
+              <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+              <div class="cf-turnstile" data-sitekey="YOUR_SITEKEY"></div>
+            -->
+            <div class="captcha" data-captcha>
+              <div class="captcha__box" data-captcha-box role="checkbox" aria-checked="false" tabindex="0" aria-label="Verify you are human">
+                <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+              </div>
+              <div class="captcha__spinner" aria-hidden="true"></div>
+              <p class="captcha__text" data-captcha-text>I am human. Tap to verify.</p>
+              <p class="captcha__badge">Protected form<br>Privacy first</p>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--ember" type="submit" data-submit disabled data-magnetic="0.2">
+                Send message
+                <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+              </button>
+            </div>
+
+            <p class="form__note">This opens your email app with the message ready to send to hr@elyvaro.com. Nothing is stored on this site.</p>
+
+            <div class="form__status" data-status role="status" aria-live="polite"></div>
+          </form>
+
+          <!-- side panel -->
+          <aside class="cside reveal-r" style="--d:100ms">
+            <div class="cside__card cside__card--dark">
+              <h3>Email directly</h3>
+              <p>Prefer your own mail client? Write to us anytime. Same inbox as the form.</p>
+              <a class="tlink tlink--light" href="mailto:hr@elyvaro.com">hr@elyvaro.com
+                <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#mail"></use></svg></a>
+            </div>
+            <div class="cside__card">
+              <h3>What to expect</h3>
+              <p>We read every message. There is no automated reply and no ticket number. If your question needs a careful answer, it will get one.</p>
+            </div>
+            <div class="cside__card">
+              <h3>Nothing is for sale yet</h3>
+              <p>Elyvaro and both of its businesses are in preparation. This form is for questions and introductions, not orders.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- marquee -->
+    <div class="marquee marquee--ember" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item">Questions</span>
+          <span class="marquee__item">Introductions</span>
+          <span class="marquee__item">Partnerships</span>
+          <span class="marquee__item">Press</span>
+          <span class="marquee__item">K and J Beauty</span>
+          <span class="marquee__item">Modern Lifestyle</span>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item">Questions</span>
+          <span class="marquee__item">Introductions</span>
+          <span class="marquee__item">Partnerships</span>
+          <span class="marquee__item">Press</span>
+          <span class="marquee__item">K and J Beauty</span>
+          <span class="marquee__item">Modern Lifestyle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="section" aria-labelledby="cfaq-h">
+      <div class="wrap center-narrow">
+        <div class="sec-head sec-head--center reveal">
+          <h2 class="morph" id="cfaq-h">Before you <span class="accent">write</span>.</h2>
+          <p>A few things people usually ask first.</p>
+        </div>
+        <div class="faq reveal" style="--d:80ms">
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="cfaq-a1" id="cfaq-q1">
+              Can I place an order through this form?
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+            </button>
+            <div class="faq__a" id="cfaq-a1" role="region" aria-labelledby="cfaq-q1">
+              <div><p>No. Nothing is for sale yet. Use this form for questions, introductions and partnerships only.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="cfaq-a2" id="cfaq-q2">
+              How soon will I get a reply?
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+            </button>
+            <div class="faq__a" id="cfaq-a2" role="region" aria-labelledby="cfaq-q2">
+              <div><p>We do not promise a fixed response time. Messages are read by a person and answered as soon as possible.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="cfaq-a3" id="cfaq-q3">
+              Is my message stored on this website?
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+            </button>
+            <div class="faq__a" id="cfaq-a3" role="region" aria-labelledby="cfaq-q3">
+              <div><p>No. The form opens your own email app. Nothing you type is saved by this site.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="cfaq-a4" id="cfaq-q4">
+              Which subject should I choose?
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+            </button>
+            <div class="faq__a" id="cfaq-a4" role="region" aria-labelledby="cfaq-q4">
+              <div><p>Pick the closest match. If none fit, choose General enquiry and say what it is about in the message.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- closing -->
+    <section class="section" aria-labelledby="cclose-h">
+      <div class="wrap">
+        <div class="glow-card reveal">
+          <h2 id="cclose-h">Prefer to <span class="accent-sun">browse first</span>?</h2>
+          <p>Both business pages are open. Read what is being built, then come back when you have something to say.</p>
+          <div class="glow-card__actions">
+            <a class="btn btn--sun" href="/k-and-j-beauty/" data-magnetic="0.25">K and J Beauty
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+            <a class="tlink tlink--light" href="/modern-lifestyle/">Modern Lifestyle Store
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer footer--dark">
+    <div class="wrap">
+      <div class="footer__top">
+        <div>
+          <a class="wordmark" href="/">Elyvaro<span class="dot">.</span></a>
+          <p class="footer__tag">Parent company of K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
+        </div>
+        <div class="footer__col">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/k-and-j-beauty/">K and J Beauty Products</a></li>
+            <li><a href="/modern-lifestyle/">Modern Lifestyle &amp; Discovery Store</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="/contact/">Contact form</a></li>
+            <li><a href="mailto:hr@elyvaro.com">hr@elyvaro.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Elyvaro. All rights reserved.</span>
+        <span>Both businesses in preparation.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

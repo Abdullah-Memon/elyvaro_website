@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="K and J Beauty Products">
   <meta name="twitter:description" content="Korean and Japanese cosmetics for women and men. Currently in preparation.">
   <meta name="twitter:image" content="https://www.elyvaro.com/assets/img/K%26J/clearcut-derby-pfot_JVH274-unsplash.jpg">
-  <meta name="theme-color" content="#b3455a">
+  <meta name="theme-color" content="#f6f0e5">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -26,11 +26,15 @@
 </head>
 <body class="pg-beauty">
   <a class="skip" href="#main">Skip to content</a>
-  <div class="cursor" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="wordmark" href="/" aria-label="Home">Elyvaro</a>
+      <a class="wordmark" href="/" aria-label="Elyvaro home">
+        <!-- <span class="wordmark__mark" aria-hidden="true">
+          <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+        </span> -->
+        <span class="wordmark__name">Elyvaro</span>
+      </a>
       <nav aria-label="Primary">
         <ul class="nav__links">
           <li><a href="/">Home</a></li>
@@ -39,6 +43,9 @@
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
+      <div class="nav__cta-slot">
+        <a class="btn btn--accent nav__cta" href="mailto:hr@elyvaro.com">Email us</a>
+      </div>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <svg class="ico ico-menu" aria-hidden="true"><use href="/assets/icons/sprite.svg#menu"></use></svg>
         <svg class="ico ico-x" aria-hidden="true"><use href="/assets/icons/sprite.svg#x"></use></svg>
@@ -60,30 +67,55 @@
   <main id="main">
 
     <!-- hero -->
-    <section class="hero-b" data-par-host>
-      <div class="glow glow--berry" style="width: 480px; height: 480px; right: -80px; top: 40px;" aria-hidden="true"></div>
-      <div class="wrap hero-b__grid">
-        <figure class="fig hero-b__media rise-s" style="--d:160ms" data-par="12">
-          <img src="/assets/img/K%26J/majed-swan-0755EnIiTX4-unsplash.webp"
-               sizes="(min-width: 1024px) 460px, 100vw"
-               width="1800" height="1800" fetchpriority="high" decoding="async"
-               alt="A white serum bottle with a wooden dropper cap floating against a soft grey background">
-        </figure>
-        <div class="hero-b__text">
-          <a class="kicker rise" style="--d:60ms" href="/">A new beauty brand in preparation
-            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
-          <h1 class="rise morph" style="--d:140ms">K and J <span class="accent-berry">Beauty</span> Products</h1>
-          <p class="hero-b__sub rise" style="--d:260ms">Korean and Japanese cosmetics for women and men.</p>
+    <section class="hero hero--page hero--beauty" data-par-host>
+      <div class="hero__blob" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow rise" style="--d:60ms">A new beauty brand in preparation</p>
+          <h1 class="rise morph" style="--d:140ms">K and J <span class="accent">Beauty</span> Products</h1>
+          <p class="hero__sub rise" style="--d:260ms">Korean and Japanese cosmetics for women and men. Daily basics that keep skin clean, and the colour that goes on top.</p>
           <div class="hero__actions rise" style="--d:380ms">
-            <a class="btn btn--berry" href="#covers" data-magnetic="0.25">What it covers
+            <a class="btn btn--accent" href="#covers" data-magnetic="0.25">What it covers
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-down"></use></svg></a>
+          </div>
+          <div class="hero__marks rise" style="--d:460ms">
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#droplet"></use></svg>
+              </span>
+              <div><b>Daily basics</b><span>Cleansers and skincare</span></div>
+            </div>
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#sparkles"></use></svg>
+              </span>
+              <div><b>Colour</b><span>When you feel like it</span></div>
+            </div>
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#heart"></use></svg>
+              </span>
+              <div><b>Women and men</b><span>One range, not two</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media rise-s" style="--d:160ms">
+          <figure class="hero__frame" data-par="12">
+            <img src="/assets/img/K%26J/majed-swan-0755EnIiTX4-unsplash.webp"
+                 sizes="(min-width: 900px) 44vw, 92vw"
+                 width="1800" height="1800" fetchpriority="high" decoding="async"
+                 alt="A white serum bottle with a wooden dropper cap floating against a soft grey background">
+          </figure>
+          <div class="hero__badge rise" style="--d:520ms">
+            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#clock"></use></svg>
+            <div><b>Not on sale yet</b><span>Range still being shaped</span></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- marquee -->
-    <div class="marquee marquee--night" aria-hidden="true">
+    <div class="marquee marquee--pale" aria-hidden="true">
       <div class="marquee__track">
         <div class="marquee__group">
           <span class="marquee__item">Facial cleansers</span>
@@ -111,29 +143,62 @@
     <!-- what it covers -->
     <section class="section" id="covers" aria-labelledby="covers-h">
       <div class="wrap">
-        <div class="reveal">
-          <h2 id="covers-h">Korean and Japanese beauty, for <span class="accent-berry">women and men</span>.</h2>
-          <p class="covers__intro">K and J takes its name from Korean and Japanese cosmetics: the daily basics that keep skin clean, and the colour that goes on top. The range is being prepared for both women and men, and the confirmed selection will be published here when it is ready.</p>
+        <div class="sec-head reveal">
+          <p class="eyebrow">What it covers</p>
+          <h2 id="covers-h" style="margin-top: 14px;">Korean and Japanese beauty, for <span class="accent">women and men</span>.</h2>
+          <p>K and J takes its name from Korean and Japanese cosmetics: the daily basics that keep skin clean, and the colour that goes on top. The range is being prepared for both women and men, and the confirmed selection will be published here when it is ready.</p>
         </div>
-        <ul class="cats reveal" style="--d:100ms">
-          <li>Facial cleansers and face wash<span>Everyday cleansing basics.</span></li>
-          <li>Masks<span>Weekly and seasonal care.</span></li>
-          <li>Lipstick and colour<span>Shades for daily wear and going out.</span></li>
-          <li>Skincare basics<span>Toners, serums, creams and SPF.</span></li>
-        </ul>
-        <p class="cats-note reveal">Products, pricing and availability will be confirmed here before anything goes on sale.</p>
+        <div class="tiles">
+          <div class="tile reveal-l">
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#droplet"></use></svg>
+            </span>
+            <div>
+              <h3>Facial cleansers and face wash</h3>
+              <p>Everyday cleansing basics.</p>
+            </div>
+          </div>
+          <div class="tile reveal-r" style="--d:90ms">
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#sparkles"></use></svg>
+            </span>
+            <div>
+              <h3>Masks</h3>
+              <p>Weekly and seasonal care.</p>
+            </div>
+          </div>
+          <div class="tile reveal-l" style="--d:180ms">
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#flame"></use></svg>
+            </span>
+            <div>
+              <h3>Lipstick and colour</h3>
+              <p>Shades for daily wear and going out.</p>
+            </div>
+          </div>
+          <div class="tile reveal-r" style="--d:270ms">
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+            </span>
+            <div>
+              <h3>Skincare basics</h3>
+              <p>Toners, serums, creams and SPF.</p>
+            </div>
+          </div>
+        </div>
+        <p class="gallery__note reveal" style="margin-top: 22px;">Products, pricing and availability will be confirmed here before anything goes on sale.</p>
       </div>
     </section>
 
     <!-- stills -->
     <section class="section section--sm" aria-label="Editorial stills">
       <div class="wrap duo">
-        <figure class="fig clip">
+        <figure class="duo__fig clip">
           <img src="/assets/img/K%26J/ela-de-pure-tWxfxTvvH8g-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                alt="Four serum dropper bottles lined up on a shelf beside a lamp and white blossoms">
           <figcaption>Everyday basics.</figcaption>
         </figure>
-        <figure class="fig clip" style="--d:120ms">
+        <figure class="duo__fig clip" style="--d:120ms">
           <img src="/assets/img/K%26J/belle-beauty-JPvy3rrWSeM-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                alt="A makeup brush, foundation tube and lip colours laid out on white marble between pink flowers">
           <figcaption>Colour cosmetics.</figcaption>
@@ -147,12 +212,12 @@
         <div class="esplit">
           <div class="esplit__media clip">
             <img src="/assets/img/K%26J/pmv-chamara-ILhf4VsPn_w-unsplash.webp"
-                 sizes="(min-width: 900px) 46vw, 100vw"
+                 sizes="(min-width: 880px) 46vw, 100vw"
                  width="1800" height="1201" loading="lazy" decoding="async"
                  alt="Amber and copper skincare bottles and a compact arranged on a dark surface">
           </div>
-          <div class="esplit__body reveal-l">
-            <h2 class="morph" id="why-h">Why Korean and Japanese <span class="accent-berry">beauty</span>.</h2>
+          <div class="esplit__body reveal-r">
+            <h2 class="morph" id="why-h">Why Korean and Japanese <span class="accent">beauty</span>.</h2>
             <p>K and J takes its name from two traditions known for daily care first: gentle cleansing, consistent skincare, and colour that enhances rather than covers.</p>
             <p>The range being prepared follows that logic. Basics you use every day, masks for the days you want more, and colour when you feel like it. For women and men, as one range.</p>
           </div>
@@ -160,13 +225,15 @@
       </div>
     </section>
 
-    <!-- ritual statement + band -->
+    <!-- ritual statement -->
     <section class="section section--sm" aria-labelledby="ritual-h">
       <div class="wrap">
-        <h2 class="ritual__line reveal" id="ritual-h">Daily basics first, <span class="accent-berry">colour</span> when you want it.</h2>
-        <figure class="fig ritual__fig clip">
+        <div class="statement reveal">
+          <h2 id="ritual-h">Daily basics first, <span class="accent" style="color: var(--accent);">colour</span> when you want it.</h2>
+        </div>
+        <figure class="strip__fig strip__fig--wide clip" style="margin-top: clamp(28px, 4vw, 44px);">
           <img src="/assets/img/K%26J/float-lipstick.webp"
-               sizes="(min-width: 1024px) calc(100vw - 96px), 100vw"
+               sizes="(min-width: 1240px) 1240px, 92vw"
                width="1000" height="1250" loading="lazy" decoding="async"
                alt="Row of open lipstick tubes in red, pink and nude shades on a white studio background">
         </figure>
@@ -175,45 +242,41 @@
 
     <!-- for women and men -->
     <section class="section section--sm" aria-labelledby="men-h">
-      <div class="wrap men">
-        <div class="men__body reveal-l">
-          <h2 class="morph" id="men-h">For women <span class="accent-berry">and men</span>.</h2>
-          <p>K and J Beauty Products is being prepared as one range for everyone, not a women's line with a separate corner for men.</p>
-          <p>How that range is shaped will be confirmed here, in the same place everything else is announced.</p>
+      <div class="wrap">
+        <div class="esplit esplit--flip">
+          <div class="esplit__body reveal-l">
+            <h2 class="morph" id="men-h">For women <span class="accent">and men</span>.</h2>
+            <p>K and J Beauty Products is being prepared as one range for everyone, not a women's line with a separate corner for men.</p>
+            <p>How that range is shaped will be confirmed here, in the same place everything else is announced.</p>
+          </div>
+          <div class="esplit__media clip" style="--d:120ms">
+            <img src="/assets/img/K%26J/shashank-singh-FrHRgndK0UE-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
+                 alt="White, black and grey grooming bottles on a concrete podium with green leaves">
+          </div>
         </div>
-        <figure class="fig men__fig clip" style="--d:120ms">
-          <img src="/assets/img/K%26J/shashank-singh-FrHRgndK0UE-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
-               alt="White, black and grey grooming bottles on a concrete podium with green leaves">
-        </figure>
       </div>
     </section>
 
     <!-- what we will confirm -->
     <section class="section" aria-labelledby="confirm-h">
       <div class="wrap">
-        <div class="sec-head">
-          <h2 class="morph" id="confirm-h">What we will confirm <span class="accent-berry">before launch</span>.</h2>
+        <div class="sec-head reveal">
+          <h2 class="morph" id="confirm-h">What we will confirm <span class="accent">before launch</span>.</h2>
           <p>Nothing below is invented. Each item will be published here when it is real.</p>
         </div>
-        <div class="checks checks--3">
+        <div class="checks">
           <div class="check reveal-l">
-            <div class="check__mark" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#circle-check"></use></svg>
             <h3>Products and categories</h3>
             <p>The final selection across face wash, cleansers, masks, colour and skincare will be listed here.</p>
           </div>
           <div class="check reveal-pop" style="--d:100ms">
-            <div class="check__mark" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#circle-check"></use></svg>
             <h3>Pricing and availability</h3>
             <p>Prices and where to buy will appear on this page before anything goes on sale.</p>
           </div>
           <div class="check reveal-r" style="--d:200ms">
-            <div class="check__mark" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#circle-check"></use></svg>
             <h3>Ingredients and claims</h3>
             <p>Any product claim will be backed by what is on the label. We will not invent certifications.</p>
           </div>
@@ -225,7 +288,7 @@
     <section class="section section--sm" aria-labelledby="bfaq-h">
       <div class="wrap center-narrow">
         <div class="sec-head sec-head--center reveal">
-          <h2 id="bfaq-h">Beauty questions, <span class="accent-berry">answered</span>.</h2>
+          <h2 id="bfaq-h">Beauty questions, <span class="accent">answered</span>.</h2>
         </div>
         <div class="faq reveal" style="--d:80ms">
           <div class="faq__item">
@@ -271,13 +334,15 @@
     <!-- coming soon -->
     <section class="section" aria-labelledby="soon-h">
       <div class="wrap">
-        <div class="glow-card reveal">
-          <h2 id="soon-h">Not on <span class="accent-sun">sale yet</span>.</h2>
-          <p>K and J Beauty Products has no launch date and no confirmed stock. When there is something real to show, it will appear on this page first.</p>
-          <div class="glow-card__actions">
-            <a class="btn btn--sun" href="/contact/" data-magnetic="0.25">Ask about K and J Beauty
+        <div class="close-card reveal">
+          <div>
+            <h2 id="soon-h">Not on <span class="accent">sale yet</span>.</h2>
+            <p>K and J Beauty Products has no launch date and no confirmed stock. When there is something real to show, it will appear on this page first.</p>
+          </div>
+          <div class="close-card__actions">
+            <a class="btn btn--accent" href="/contact/" data-magnetic="0.25">Ask about K and J Beauty
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
-            <a class="tlink tlink--light" href="/modern-lifestyle/">See the Lifestyle Store
+            <a class="tlink" href="/modern-lifestyle/">See the Lifestyle Store
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
           </div>
         </div>
@@ -290,12 +355,17 @@
     <div class="wrap">
       <div class="footer__top">
         <div>
-          <a class="wordmark" href="/">K and J <span class="dot">+</span> Lifestyle</a>
-          <p class="footer__tag">K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
+          <a class="wordmark" href="/" aria-label="Elyvaro home">
+            <span class="wordmark__mark" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+            </span>
+            <span class="wordmark__name">Elyvaro</span>
+          </a>
+          <p class="footer__tag">Parent company of K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
         </div>
         <div class="footer__col">
           <h3>Pages</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/">Home</a></li>
             <li><a href="/k-and-j-beauty/">K and J Beauty Products</a></li>
             <li><a href="/modern-lifestyle/">Modern Lifestyle &amp; Discovery Store</a></li>
@@ -304,7 +374,7 @@
         </div>
         <div class="footer__col">
           <h3>Contact</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/contact/">Contact form</a></li>
             <li><a href="mailto:hr@elyvaro.com">hr@elyvaro.com</a></li>
           </ul>

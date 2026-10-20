@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="Contact">
   <meta name="twitter:description" content="Questions, introductions and partnerships.">
   <meta name="twitter:image" content="https://www.elyvaro.com/assets/img/K%26J/clearcut-derby-pfot_JVH274-unsplash.jpg">
-  <meta name="theme-color" content="#b8492a">
+  <meta name="theme-color" content="#f6f0e5">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -26,11 +26,15 @@
 </head>
 <body class="pg-contact">
   <a class="skip" href="#main">Skip to content</a>
-  <div class="cursor" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="wordmark" href="/" aria-label="Home">Elyvaro</a>
+      <a class="wordmark" href="/" aria-label="Elyvaro home">
+        <!-- <span class="wordmark__mark" aria-hidden="true">
+          <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+        </span> -->
+        <span class="wordmark__name">Elyvaro</span>
+      </a>
       <nav aria-label="Primary">
         <ul class="nav__links">
           <li><a href="/">Home</a></li>
@@ -39,6 +43,9 @@
           <li><a href="/contact/" aria-current="page">Contact</a></li>
         </ul>
       </nav>
+      <div class="nav__cta-slot">
+        <a class="btn btn--accent nav__cta" href="mailto:hr@elyvaro.com">Email us</a>
+      </div>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <svg class="ico ico-menu" aria-hidden="true"><use href="/assets/icons/sprite.svg#menu"></use></svg>
         <svg class="ico ico-x" aria-hidden="true"><use href="/assets/icons/sprite.svg#x"></use></svg>
@@ -60,18 +67,43 @@
   <main id="main">
 
     <!-- hero -->
-    <section class="hero-c">
-      <div class="wrap">
-        <p class="hero-c__eyebrow rise" style="--d:40ms">Get in touch</p>
-        <h1 class="rise morph" style="--d:120ms">Say <span class="accent">hello</span>.</h1>
-        <p class="rise" style="--d:220ms">Questions, introductions, or partnership enquiries. Everything arrives at the same inbox and is read by a person.</p>
+    <section class="hero hero--page">
+      <div class="hero__blob" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow rise" style="--d:40ms">Get in touch</p>
+          <h1 class="rise morph" style="--d:120ms">Say <span class="accent">hello</span>.</h1>
+          <p class="hero__sub rise" style="--d:220ms">Questions, introductions, or partnership enquiries. Everything arrives at the same inbox and is read by a person.</p>
+          <div class="hero__marks rise" style="--d:340ms">
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#mail"></use></svg>
+              </span>
+              <div><b>One inbox</b><span>Form and email both land here</span></div>
+            </div>
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#heart"></use></svg>
+              </span>
+              <div><b>Read by a person</b><span>No automated replies</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media rise-s" style="--d:180ms">
+          <figure class="hero__frame">
+            <img src="/assets/img/K%26J/ela-de-pure-tWxfxTvvH8g-unsplash.webp"
+                 sizes="(min-width: 900px) 44vw, 92vw"
+                 width="1800" height="1800" fetchpriority="high" decoding="async"
+                 alt="Four serum dropper bottles lined up on a shelf beside a lamp and white blossoms">
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- form + side -->
     <section class="section section--sm" aria-labelledby="form-h">
       <div class="wrap">
-        <h2 id="form-h" class="visually-hidden" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Contact form</h2>
+        <h2 id="form-h" class="visually-hidden">Contact form</h2>
         <div class="contact-grid">
           <!--
             FRONT-END ONLY FORM
@@ -80,7 +112,7 @@
             To go live with a form backend later (e.g. Web3Forms + Cloudflare Turnstile),
             swap the form action and add the captcha script in the marked slots below.
           -->
-          <form class="form reveal-l" data-contact-form novalidate>
+          <form class="form-card reveal-l" data-contact-form novalidate>
             <div class="form__row form__row--2">
               <div class="field">
                 <input type="text" id="cf-name" name="name" placeholder=" " required autocomplete="name">
@@ -126,15 +158,14 @@
             -->
             <div class="captcha" data-captcha>
               <div class="captcha__box" data-captcha-box role="checkbox" aria-checked="false" tabindex="0" aria-label="Verify you are human">
-                <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
+                <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#circle-check"></use></svg>
               </div>
-              <div class="captcha__spinner" aria-hidden="true"></div>
               <p class="captcha__text" data-captcha-text>I am human. Tap to verify.</p>
-              <p class="captcha__badge">Protected form<br>Privacy first</p>
+              <p class="captcha__note">Protected form<br>Privacy first</p>
             </div>
 
             <div class="form__actions">
-              <button class="btn btn--ember" type="submit" data-submit disabled data-magnetic="0.2">
+              <button class="btn btn--accent" type="submit" data-submit disabled data-magnetic="0.2">
                 Send message
                 <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
               </button>
@@ -146,18 +177,18 @@
           </form>
 
           <!-- side panel -->
-          <aside class="cside reveal-r" style="--d:100ms">
-            <div class="cside__card cside__card--dark">
+          <aside class="side-panel reveal-r" style="--d:100ms">
+            <div class="side-card">
               <h3>Email directly</h3>
               <p>Prefer your own mail client? Write to us anytime. Same inbox as the form.</p>
-              <a class="tlink tlink--light" href="mailto:hr@elyvaro.com">hr@elyvaro.com
+              <a class="tlink" href="mailto:hr@elyvaro.com">hr@elyvaro.com
                 <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#mail"></use></svg></a>
             </div>
-            <div class="cside__card">
+            <div class="side-card">
               <h3>What to expect</h3>
               <p>We read every message. There is no automated reply and no ticket number. If your question needs a careful answer, it will get one.</p>
             </div>
-            <div class="cside__card">
+            <div class="side-card">
               <h3>Nothing is for sale yet</h3>
               <p>Both businesses are in preparation. This form is for questions and introductions, not orders.</p>
             </div>
@@ -167,7 +198,7 @@
     </section>
 
     <!-- marquee -->
-    <div class="marquee marquee--ember" aria-hidden="true">
+    <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         <div class="marquee__group">
           <span class="marquee__item">Questions</span>
@@ -239,13 +270,15 @@
     <!-- closing -->
     <section class="section" aria-labelledby="cclose-h">
       <div class="wrap">
-        <div class="glow-card reveal">
-          <h2 id="cclose-h">Prefer to <span class="accent-sun">browse first</span>?</h2>
-          <p>Both business pages are open. Read what is being built, then come back when you have something to say.</p>
-          <div class="glow-card__actions">
-            <a class="btn btn--sun" href="/k-and-j-beauty/" data-magnetic="0.25">K and J Beauty
+        <div class="close-card reveal">
+          <div>
+            <h2 id="cclose-h">Prefer to <span class="accent">browse first</span>?</h2>
+            <p>Both business pages are open. Read what is being built, then come back when you have something to say.</p>
+          </div>
+          <div class="close-card__actions">
+            <a class="btn btn--accent" href="/k-and-j-beauty/" data-magnetic="0.25">K and J Beauty
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
-            <a class="tlink tlink--light" href="/modern-lifestyle/">Modern Lifestyle Store
+            <a class="tlink" href="/modern-lifestyle/">Modern Lifestyle Store
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
           </div>
         </div>
@@ -254,16 +287,21 @@
 
   </main>
 
-  <footer class="footer footer--dark">
+  <footer class="footer">
     <div class="wrap">
       <div class="footer__top">
         <div>
-          <a class="wordmark" href="/">K and J <span class="dot">+</span> Lifestyle</a>
+          <a class="wordmark" href="/" aria-label="Elyvaro home">
+            <span class="wordmark__mark" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+            </span>
+            <span class="wordmark__name">Elyvaro</span>
+          </a>
           <p class="footer__tag">Parent company of K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
         </div>
         <div class="footer__col">
           <h3>Pages</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/">Home</a></li>
             <li><a href="/k-and-j-beauty/">K and J Beauty Products</a></li>
             <li><a href="/modern-lifestyle/">Modern Lifestyle &amp; Discovery Store</a></li>
@@ -272,7 +310,7 @@
         </div>
         <div class="footer__col">
           <h3>Contact</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/contact/">Contact form</a></li>
             <li><a href="mailto:hr@elyvaro.com">hr@elyvaro.com</a></li>
           </ul>

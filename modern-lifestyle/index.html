@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="Modern Lifestyle &amp; Discovery Store">
   <meta name="twitter:description" content="A Dubai discovery store. Find what's next. Currently in preparation.">
   <meta name="twitter:image" content="https://www.elyvaro.com/assets/img/K%26J/clearcut-derby-pfot_JVH274-unsplash.jpg">
-  <meta name="theme-color" content="#b8492a">
+  <meta name="theme-color" content="#f6f0e5">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/fonts.css">
@@ -26,11 +26,15 @@
 </head>
 <body class="pg-life">
   <a class="skip" href="#main">Skip to content</a>
-  <div class="cursor" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="wordmark" href="/" aria-label="Home">Elyvaro</a>
+      <a class="wordmark" href="/" aria-label="Elyvaro home">
+        <!-- <span class="wordmark__mark" aria-hidden="true">
+          <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+        </span> -->
+        <span class="wordmark__name">Elyvaro</span>
+      </a>
       <nav aria-label="Primary">
         <ul class="nav__links">
           <li><a href="/">Home</a></li>
@@ -39,6 +43,9 @@
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
+      <div class="nav__cta-slot">
+        <a class="btn btn--accent nav__cta" href="mailto:hr@elyvaro.com">Email us</a>
+      </div>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <svg class="ico ico-menu" aria-hidden="true"><use href="/assets/icons/sprite.svg#menu"></use></svg>
         <svg class="ico ico-x" aria-hidden="true"><use href="/assets/icons/sprite.svg#x"></use></svg>
@@ -59,30 +66,56 @@
 
   <main id="main">
 
-    <!-- hero: wide image + overlapping panel -->
-    <section class="hero-l">
-      <figure class="hero-l__media rise">
-        <img src="/assets/img/Modern%20Life%20Style/modernlifestyle.jpg"
-             sizes="90vw"
-             width="1800" height="1000" fetchpriority="high" decoding="async"
-             alt="Shelves of colorful pens arranged in glass jars against a white brick wall">
-      </figure>
-      <div class="hero-l__wrap">
-        <div class="hero-l__panel rise" style="--d:200ms">
-          <a class="kicker" href="/">A new store in preparation
-            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
-          <h1 class="morph">Find what is <span class="accent">next</span>.</h1>
-          <p class="hero-l__sub">Dubai's new discovery store. Trending finds, clever upgrades and objects with personality. Come curious.</p>
-          <div class="hero__actions">
-            <a class="btn btn--ember" href="#depts" data-magnetic="0.25">Explore departments
+    <!-- hero -->
+    <section class="hero hero--page" data-par-host>
+      <div class="hero__blob" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow rise" style="--d:60ms">A new store in preparation</p>
+          <h1 class="rise morph" style="--d:140ms">Find what is <span class="accent">next</span>.</h1>
+          <p class="hero__sub rise" style="--d:260ms">Dubai's new discovery store. Trending finds, clever upgrades and objects with personality. Come curious.</p>
+          <div class="hero__actions rise" style="--d:380ms">
+            <a class="btn btn--accent" href="#depts" data-magnetic="0.25">Explore departments
               <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-down"></use></svg></a>
+          </div>
+          <div class="hero__marks rise" style="--d:460ms">
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#gift"></use></svg>
+              </span>
+              <div><b>Ten departments</b><span>Each with its own world</span></div>
+            </div>
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#map-pin"></use></svg>
+              </span>
+              <div><b>Planned for Dubai</b><span>Location to be confirmed</span></div>
+            </div>
+            <div class="hero__mark">
+              <span class="hero__mark-ico" aria-hidden="true">
+                <svg class="ico"><use href="/assets/icons/sprite.svg#sparkles"></use></svg>
+              </span>
+              <div><b>Open without a list</b><span>Leave with a story</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media rise-s" style="--d:160ms">
+          <figure class="hero__frame" data-par="10">
+            <img src="/assets/img/Modern%20Life%20Style/modernlifestyle.jpg"
+                 sizes="(min-width: 900px) 44vw, 92vw"
+                 width="1800" height="1000" fetchpriority="high" decoding="async"
+                 alt="Shelves of colorful pens arranged in glass jars against a white brick wall">
+          </figure>
+          <div class="hero__badge rise" style="--d:520ms">
+            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#package"></use></svg>
+            <div><b>Not open yet</b><span>No launch date set</span></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- marquee -->
-    <div class="marquee marquee--sun" aria-hidden="true">
+    <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         <div class="marquee__group">
           <span class="marquee__item">Stationery &amp; Art</span>
@@ -113,94 +146,95 @@
 
     <!-- concept -->
     <section class="section" id="concept" aria-labelledby="concept-h">
-      <div class="wrap concept__grid">
-        <h2 id="concept-h" class="morph">A store built around <span class="accent">discovery</span>.</h2>
-        <div class="concept__cols reveal" style="--d:90ms">
-          <p>A place you come to look around, not just to buy. The idea is a store for modern living: everyday objects, small upgrades, and things you did not know you were looking for until you saw them.</p>
-          <p>Planned for Dubai, the store is being shaped around ten departments, each with its own visual world. The concept is still being worked out. Nothing is available to buy today.</p>
+      <div class="wrap intro__grid">
+        <div>
+          <div class="sec-head reveal">
+            <p class="eyebrow">The concept</p>
+            <h2 id="concept-h" style="margin-top: 14px;" class="morph">A store built around <span class="accent">discovery</span>.</h2>
+            <div class="intro__body">
+              <p>A place you come to look around, not just to buy. The idea is a store for modern living: everyday objects, small upgrades, and things you did not know you were looking for until you saw them.</p>
+              <p>Planned for Dubai, the store is being shaped around ten departments, each with its own visual world. The concept is still being worked out. Nothing is available to buy today.</p>
+            </div>
+          </div>
         </div>
-        <ul class="chips reveal" style="--d:140ms" aria-label="Department preview">
-          <li>Stationery &amp; Art</li>
-          <li>Toys, Plush &amp; Collectibles</li>
-          <li>Fashion &amp; Accessories</li>
-          <li>Gifts &amp; Party</li>
-          <li>Home &amp; Lifestyle</li>
-          <li>Organise &amp; Storage</li>
-          <li>Kitchen &amp; Dining</li>
-          <li>Travel &amp; Bags</li>
-          <li>Tech &amp; Gadgets</li>
-          <li>New &amp; Trending</li>
-        </ul>
+        <div class="intro__stats reveal" style="--d:100ms">
+          <div class="intro__stat">
+            <b>Ten</b>
+            <span>departments planned</span>
+          </div>
+          <div class="intro__stat">
+            <b>One</b>
+            <span>city: Dubai, UAE</span>
+          </div>
+          <div class="intro__stat">
+            <b>Zero</b>
+            <span>openings date set</span>
+          </div>
+          <div class="intro__stat">
+            <b>Open</b>
+            <span>to product ideas</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- departments grid -->
     <section class="section section--sm" id="depts" aria-labelledby="depts-h">
       <div class="wrap">
-        <div class="sec-head">
-          <h2 class="morph" id="depts-h">Pick your <span class="accent">obsession</span>.</h2>
+        <div class="sec-head reveal">
+          <h2 id="depts-h" class="morph">Pick your <span class="accent">obsession</span>.</h2>
           <p>Each department will have its own visual world. A preview of the ten categories being prepared.</p>
         </div>
         <div class="depts">
           <a class="dept dept--wide reveal-l" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/float-toys.webp" width="1000" height="1250" loading="lazy" decoding="async"
                  alt="Four cartoon character figurines standing in a row on a reflective white surface">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Toys, Plush &amp; Collectibles<span>Kidult culture</span></div>
+            <div class="dept__label"><b>Toys, Plush &amp; Collectibles</b><span>Kidult culture</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-r" style="--d:60ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/life-stationery.webp" width="1000" height="1250" loading="lazy" decoding="async"
                  alt="A burgundy planner, pens and a cup of coffee on a white desk">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Stationery &amp; Art<span>Analog comeback</span></div>
+            <div class="dept__label"><b>Stationery &amp; Art</b><span>Analog comeback</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-l" style="--d:120ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/parisa-safaei--_12be3InkQ-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="Two crystal leaf brooches, one gold-toned and one silver-toned, on black satin">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Fashion &amp; Accessories<span>Charm stacking</span></div>
+            <div class="dept__label"><b>Fashion &amp; Accessories</b><span>Charm stacking</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-r" style="--d:180ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/firdaus-roslan-nfr_aSoOI18-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="A leather-strap wristwatch with its gift box, wallet and manual on dark fabric">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Tech &amp; Gadgets<span>Desk energy</span></div>
+            <div class="dept__label"><b>Tech &amp; Gadgets</b><span>Desk energy</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-pop" style="--d:240ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/olivia-bollen-ayUGdxRvjV4-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="White gift boxes tied with blush ribbons beside dried roses">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Gifts &amp; Party<span>Wrap it louder</span></div>
+            <div class="dept__label"><b>Gifts &amp; Party</b><span>Wrap it louder</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-l" style="--d:300ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/life-indoor.webp" width="1000" height="1250" loading="lazy" decoding="async"
                  alt="Warm wooden shelves with a retro radio, white tulips, wooden jars and a brass lamp">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Home &amp; Lifestyle<span>Colour-drenched living</span></div>
+            <div class="dept__label"><b>Home &amp; Lifestyle</b><span>Colour-drenched living</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-r" style="--d:360ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/dane-deaner-d9qnD33cBJs-unsplash.webp" width="1800" height="1440" loading="lazy" decoding="async"
                  alt="Open kitchen shelves stacked with teal pots, pans and plates above a marble counter">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Kitchen &amp; Dining<span>Happy tableware</span></div>
+            <div class="dept__label"><b>Kitchen &amp; Dining</b><span>Happy tableware</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-l" style="--d:420ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/hey-beauti-magazine-CUzhOX1cmjc-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="Patterned pens spilling from a glass beside a floral notebook on a white surface">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Organise &amp; Storage<span>Desk order</span></div>
+            <div class="dept__label"><b>Organise &amp; Storage</b><span>Desk order</span></div>
           </a>
-          <a class="dept dept--wide" href="#orbit">
+          <a class="dept dept--wide reveal-r" style="--d:480ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/personalgraphic-com-zxPo13geJ5U-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="A brown leather satchel with buckles and a shoulder strap on a white background">
-            <div class="dept__veil"></div>
-            <div class="dept__label">Travel &amp; Bags<span>Ready to go</span></div>
+            <div class="dept__label"><b>Travel &amp; Bags</b><span>Ready to go</span></div>
           </a>
-          <a class="dept" href="#orbit">
+          <a class="dept reveal-pop" style="--d:540ms" href="#orbit">
             <img src="/assets/img/Modern%20Life%20Style/tusik-only-ayBCtRueEtI-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                  alt="A red glitter clutch with a painted floral flap beside a wooden fan and lip glosses">
-            <div class="dept__veil"></div>
-            <div class="dept__label">New &amp; Trending<span>What's next</span></div>
+            <div class="dept__label"><b>New &amp; Trending</b><span>What's next</span></div>
           </a>
         </div>
       </div>
@@ -209,7 +243,7 @@
     <!-- orbit carousel -->
     <section class="section section--sm" id="orbit" aria-labelledby="orbit-h">
       <div class="wrap">
-        <div class="biz-head reveal">
+        <div class="sec-head reveal">
           <h2 id="orbit-h">What the store will carry</h2>
           <p>Move your mouse across the ring, or drag it, to spin through the categories.</p>
         </div>
@@ -220,52 +254,52 @@
               <figure class="orbit__item" style="--i:0" data-label="Stationery &amp; Art" data-text="Notebooks, pens and paper that are worth keeping on the desk.">
                 <img src="/assets/img/Modern%20Life%20Style/life-stationery.webp" width="1000" height="1250" loading="lazy" decoding="async"
                      alt="A burgundy planner, pens and a cup of coffee on a white desk">
-                <figcaption>Stationery</figcaption>
+                <span>Stationery</span>
               </figure>
               <figure class="orbit__item" style="--i:1" data-label="Toys, Plush &amp; Collectibles" data-text="Games, plush and collectibles for children and the young at heart.">
                 <img src="/assets/img/Modern%20Life%20Style/float-toys.webp" width="1000" height="1250" loading="lazy" decoding="async"
                      alt="Four cartoon character figurines standing in a row on a reflective white surface">
-                <figcaption>Toys</figcaption>
+                <span>Toys</span>
               </figure>
               <figure class="orbit__item" style="--i:2" data-label="Fashion &amp; Accessories" data-text="Bags, accessories and the finishing touches with personality.">
                 <img src="/assets/img/Modern%20Life%20Style/parisa-safaei--_12be3InkQ-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="Two crystal leaf brooches, one gold-toned and one silver-toned, on black satin">
-                <figcaption>Fashion</figcaption>
+                <span>Fashion</span>
               </figure>
               <figure class="orbit__item" style="--i:3" data-label="Gifts &amp; Party" data-text="Things worth wrapping, for birthdays and no-reason days.">
                 <img src="/assets/img/Modern%20Life%20Style/olivia-bollen-ayUGdxRvjV4-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="White gift boxes tied with blush ribbons beside dried roses">
-                <figcaption>Gifts</figcaption>
+                <span>Gifts</span>
               </figure>
               <figure class="orbit__item" style="--i:4" data-label="Home &amp; Lifestyle" data-text="Objects and colour for rooms you actually live in.">
                 <img src="/assets/img/Modern%20Life%20Style/life-indoor.webp" width="1000" height="1250" loading="lazy" decoding="async"
                      alt="Warm wooden shelves with a retro radio, white tulips, wooden jars and a brass lamp">
-                <figcaption>Home</figcaption>
+                <span>Home</span>
               </figure>
               <figure class="orbit__item" style="--i:5" data-label="Organise &amp; Storage" data-text="Desk and home order that still looks good on the shelf.">
                 <img src="/assets/img/Modern%20Life%20Style/hey-beauti-magazine-CUzhOX1cmjc-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="Patterned pens spilling from a glass beside a floral notebook on a white surface">
-                <figcaption>Organise</figcaption>
+                <span>Organise</span>
               </figure>
               <figure class="orbit__item" style="--i:6" data-label="Kitchen &amp; Dining" data-text="Tableware and kitchen tools that make every meal feel brighter.">
                 <img src="/assets/img/Modern%20Life%20Style/dane-deaner-d9qnD33cBJs-unsplash.webp" width="1800" height="1440" loading="lazy" decoding="async"
                      alt="Open kitchen shelves stacked with teal pots, pans and plates above a marble counter">
-                <figcaption>Kitchen</figcaption>
+                <span>Kitchen</span>
               </figure>
               <figure class="orbit__item" style="--i:7" data-label="Travel &amp; Bags" data-text="Bags and gear that make the next trip easier.">
                 <img src="/assets/img/Modern%20Life%20Style/personalgraphic-com-zxPo13geJ5U-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="A brown leather satchel with buckles and a shoulder strap on a white background">
-                <figcaption>Travel</figcaption>
+                <span>Travel</span>
               </figure>
               <figure class="orbit__item" style="--i:8" data-label="Tech &amp; Gadgets" data-text="Useful gadgets and desk companions that earn their space.">
                 <img src="/assets/img/Modern%20Life%20Style/firdaus-roslan-nfr_aSoOI18-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="A leather-strap wristwatch with its gift box, wallet and manual on dark fabric">
-                <figcaption>Tech</figcaption>
+                <span>Tech</span>
               </figure>
               <figure class="orbit__item" style="--i:9" data-label="New &amp; Trending" data-text="What is next, gathered in one place before it becomes obvious.">
                 <img src="/assets/img/Modern%20Life%20Style/tusik-only-ayBCtRueEtI-unsplash.webp" width="1800" height="1800" loading="lazy" decoding="async"
                      alt="A red glitter clutch with a painted floral flap beside a wooden fan and lip glosses">
-                <figcaption>New</figcaption>
+                <span>New</span>
               </figure>
             </div>
           </div>
@@ -283,29 +317,29 @@
     <!-- built for discovery -->
     <section class="section" aria-labelledby="disc-h">
       <div class="wrap">
-        <div class="sec-head">
+        <div class="sec-head reveal">
           <h2 class="morph" id="disc-h">Built for <span class="accent">discovery</span>.</h2>
           <p>Three ways the store is being thought about, beyond a simple product list.</p>
         </div>
-        <div class="features">
+        <div class="features features--3">
           <div class="feature reveal-l">
-            <div class="feature__icon" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#sparkles"></use></svg>
+            </span>
             <h3>Play</h3>
             <p>Toys, plush and collectibles for every age. The kidult corner: things that make a shelf smile back at you.</p>
           </div>
           <div class="feature reveal-pop" style="--d:100ms">
-            <div class="feature__icon" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#heart"></use></svg>
+            </span>
             <h3>Style</h3>
             <p>Fashion, accessories and party finds. Small upgrades that change how an ordinary outfit or celebration feels.</p>
           </div>
           <div class="feature reveal-r" style="--d:200ms">
-            <div class="feature__icon" aria-hidden="true">
-              <svg class="ico"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg>
-            </div>
+            <span class="feat-ico" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#building-store"></use></svg>
+            </span>
             <h3>Home and away</h3>
             <p>Kitchen, storage, travel and tech. Objects that make life easier and happier, at home and on the move.</p>
           </div>
@@ -313,32 +347,34 @@
       </div>
     </section>
 
-    <!-- band -->
-    <section class="band" aria-labelledby="band-h">
+    <!-- statement band -->
+    <section class="section section--sm" aria-labelledby="band-h">
       <div class="wrap">
-        <h2 id="band-h">Come curious. Leave obsessed.</h2>
-        <p>Enter without a list. Leave with a story, a new favourite, and one thing you absolutely did not plan to buy.</p>
+        <div class="statement reveal">
+          <h2 id="band-h">Come curious. Leave obsessed.</h2>
+          <p>Enter without a list. Leave with a story, a new favourite, and one thing you absolutely did not plan to buy.</p>
+        </div>
       </div>
     </section>
 
     <!-- gallery -->
     <section class="section section--sm" aria-label="Gallery">
       <div class="wrap gallery">
-        <figure class="fig g1 clip">
+        <figure class="gallery__fig clip">
           <img src="/assets/img/Modern%20Life%20Style/hannes-kottner-UpVLVLtEfss-unsplash.webp" width="1800" height="1799" loading="lazy" decoding="async"
                alt="A red plush octopus toy sitting on a desk beside a small succulent">
         </figure>
-        <figure class="fig g2 clip" style="--d:120ms">
+        <figure class="gallery__fig clip" style="--d:120ms">
           <img src="/assets/img/Modern%20Life%20Style/shraga-kopstein-eUa90rsmjIs-unsplash.webp" width="1800" height="1200" loading="lazy" decoding="async"
                alt="Colorful crayons and kids' scissors standing in a bronze pot">
         </figure>
-        <p class="gallery__note reveal" style="--d:80ms">Objects for the rooms you <em>actually</em> live in.</p>
-        <figure class="fig g3 clip" style="--d:160ms">
+        <figure class="gallery__fig clip" style="--d:160ms">
           <img src="/assets/img/Modern%20Life%20Style/erik-mclean-uXy7oXS61iQ-unsplash.webp"
-               sizes="(min-width: 900px) 58vw, 100vw"
+               sizes="(min-width: 820px) 58vw, 100vw"
                width="1800" height="1800" loading="lazy" decoding="async"
                alt="Four turtle action figures posed on stacked pizza boxes">
         </figure>
+        <p class="gallery__note reveal" style="--d:80ms">Objects for the rooms you <em>actually</em> live in.</p>
       </div>
     </section>
 
@@ -389,34 +425,41 @@
       </div>
     </section>
 
-    <!-- night closing -->
-    <section class="green on-dark" aria-labelledby="green-h">
-      <div class="wrap green__inner">
-        <div class="green__text reveal">
-          <h2 id="green-h">Not open yet, and no launch date set.</h2>
-          <p>The Modern Lifestyle &amp; Discovery Store has no confirmed opening date and nothing listed for sale. When the concept is ready to share properly, this is where it will appear first.</p>
-        </div>
-        <div class="green__actions reveal" style="--d:100ms">
-          <a class="btn btn--sun" href="/contact/" data-magnetic="0.25">Ask about the store
-            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
-          <a class="tlink tlink--light" href="/k-and-j-beauty/">See K and J Beauty
-            <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+    <!-- closing -->
+    <section class="section" aria-labelledby="green-h">
+      <div class="wrap">
+        <div class="close-card reveal">
+          <div>
+            <h2 id="green-h">Not open yet, and no launch date set.</h2>
+            <p>The Modern Lifestyle &amp; Discovery Store has no confirmed opening date and nothing listed for sale. When the concept is ready to share properly, this is where it will appear first.</p>
+          </div>
+          <div class="close-card__actions">
+            <a class="btn btn--accent" href="/contact/" data-magnetic="0.25">Ask about the store
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+            <a class="tlink" href="/k-and-j-beauty/">See K and J Beauty
+              <svg class="ico" aria-hidden="true"><use href="/assets/icons/sprite.svg#arrow-right"></use></svg></a>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer footer--dark">
+  <footer class="footer">
     <div class="wrap">
       <div class="footer__top">
         <div>
-          <a class="wordmark" href="/">K and J <span class="dot">+</span> Lifestyle</a>
-          <p class="footer__tag">K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
+          <a class="wordmark" href="/" aria-label="Elyvaro home">
+            <span class="wordmark__mark" aria-hidden="true">
+              <svg class="ico"><use href="/assets/icons/sprite.svg#leaf"></use></svg>
+            </span>
+            <span class="wordmark__name">Elyvaro</span>
+          </a>
+          <p class="footer__tag">Parent company of K and J Beauty Products and the Modern Lifestyle &amp; Discovery Store.</p>
         </div>
         <div class="footer__col">
           <h3>Pages</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/">Home</a></li>
             <li><a href="/k-and-j-beauty/">K and J Beauty Products</a></li>
             <li><a href="/modern-lifestyle/">Modern Lifestyle &amp; Discovery Store</a></li>
@@ -425,7 +468,7 @@
         </div>
         <div class="footer__col">
           <h3>Contact</h3>
-          <ul>
+          <ul class="footer-list">
             <li><a href="/contact/">Contact form</a></li>
             <li><a href="mailto:hr@elyvaro.com">hr@elyvaro.com</a></li>
           </ul>

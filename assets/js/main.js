@@ -47,7 +47,7 @@
   /* ---- v3.1: auto-assign scroll reveals to remaining blocks ---- */
   var autoReveal = (function () {
     var FAMILY = /(^|\s)(reveal|reveal-l|reveal-r|reveal-pop|morph|clip|rise|rise-s|fade-io)(\s|$)/;
-    var EXCLUDE = ".marquee, .orbit, .cursor, .nav, .hero, [data-par], [data-tilt], [data-magnetic], [data-orbit], .pairs__connector";
+    var EXCLUDE = ".marquee, .orbit, .cursor, .nav, .hero, .footer__bottom, .visually-hidden, [data-par], [data-tilt], [data-magnetic], [data-orbit], .pairs__connector";
     var GRID = /^(depts|steps|features|gallery|duo|men|esplit|faq|intro__stats|pairs__grid|contact-grid|intro__grid|concept__grid|center-narrow|green__inner|band)$|__(grid|row|list|stats)$/;
     var CARD = /card|dept|tile|step|feature|fig|stat|item|pair|glow|form|side|info|men|esplit|ritual|band|check|col|num/i;
     var TEXT = /^(H[1-6]|P|UL|OL|BLOCKQUOTE|FIGCAPTION)$/;

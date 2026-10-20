@@ -1,4 +1,4 @@
-/* Elyvaro v2: nav, reveals, cursor, magnetic, parallax, tilt, orbit. No deps. */
+/* v2: nav, reveals, cursor, magnetic, parallax, tilt, orbit. No deps. */
 (function () {
   "use strict";
 
@@ -44,8 +44,70 @@
     else if (mq.addListener) mq.addListener(onMq);
   }
 
-  /* ---- reveal on scroll (v2.2: reveal / reveal-l / reveal-r / reveal-pop / morph / clip) ---- */
-  var targets = document.querySelectorAll(".reveal, .reveal-l, .reveal-r, .reveal-pop, .morph, .clip");
+  /* ---- v3.1: auto-assign scroll reveals to remaining blocks ---- */
+  var autoReveal = (function () {
+    var FAMILY = /(^|\s)(reveal|reveal-l|reveal-r|reveal-pop|morph|clip|rise|rise-s|fade-io)(\s|$)/;
+    var EXCLUDE = ".marquee, .orbit, .cursor, .nav, .hero, [data-par], [data-tilt], [data-magnetic], [data-orbit], .pairs__connector";
+    var GRID = /^(depts|steps|features|gallery|duo|men|esplit|faq|intro__stats|pairs__grid|contact-grid|intro__grid|concept__grid|center-narrow|green__inner|band)$|__(grid|row|list|stats)$/;
+    var CARD = /card|dept|tile|step|feature|fig|stat|item|pair|glow|form|side|info|men|esplit|ritual|band|check|col|num/i;
+    var TEXT = /^(H[1-6]|P|UL|OL|BLOCKQUOTE|FIGCAPTION)$/;
+    var TEXT_CLS = /s-head|eyebrow|sub|lede|note|tag|hint|status/i;
+
+    var eligible = function (el) {
+      if (!el || el.nodeType !== 1) return false;
+      if (FAMILY.test(" " + el.className + " ")) return false;
+      if (el.closest && el.closest(EXCLUDE)) return false;
+      var t = el.tagName;
+      if (t === "SCRIPT" || t === "STYLE" || t === "NOSCRIPT" || t === "HR" || t === "BR") return false;
+      if (el.getAttribute("aria-hidden") === "true") return false;
+      return true;
+    };
+
+    var kidsOf = function (root) {
+      var out = [];
+      Array.prototype.forEach.call(root.children, function (el) {
+        if (eligible(el)) out.push(el);
+      });
+      return out;
+    };
+
+    var walk = function (root, depth) {
+      var kids = kidsOf(root);
+      kids.forEach(function (el, i) {
+        var isGrid = depth < 2 && GRID.test(el.className);
+        var sub = isGrid ? kidsOf(el) : null;
+        if (sub && sub.length >= 2 && sub.length <= 14) {
+          walk(el, depth + 1);
+          return;
+        }
+        var cls;
+        if (TEXT.test(el.tagName) || TEXT_CLS.test(el.className)) cls = "reveal";
+        else if (kids.length === 1) cls = CARD.test(el.className) ? "reveal-pop" : "reveal";
+        else cls = i % 2 === 0 ? "reveal-l" : "reveal-r";
+        el.classList.add(cls);
+        if (!/--d\s*:/.test(el.getAttribute("style") || "")) {
+          el.style.setProperty("--d", Math.min(i, 6) * 90 + "ms");
+        }
+      });
+    };
+
+    return function () {
+      if (reduced) return;
+      Array.prototype.forEach.call(document.querySelectorAll("section, footer"), function (sec) {
+        if (/\bhero\b/.test(sec.className)) return;
+        sec.classList.add("fade-io");
+        var wrap = null;
+        Array.prototype.forEach.call(sec.children, function (c) {
+          if (/\bwrap\b/.test(c.className)) wrap = c;
+        });
+        walk(wrap || sec, 0);
+      });
+    };
+  })();
+  autoReveal();
+
+  /* ---- reveal on scroll (v2.2: reveal / reveal-l / reveal-r / reveal-pop / morph / clip / fade-io) ---- */
+  var targets = document.querySelectorAll(".reveal, .reveal-l, .reveal-r, .reveal-pop, .morph, .clip, .fade-io");
   if (targets.length) {
     if (reduced || !("IntersectionObserver" in window)) {
       Array.prototype.forEach.call(targets, function (el) {
@@ -103,7 +165,7 @@
             }
           });
         },
-        { threshold: 0.08, rootMargin: "0px 0px -4% 0px" }
+        { threshold: 0.14, rootMargin: "0px 0px -16% 0px" }
       );
       Array.prototype.forEach.call(targets, function (el) {
         io.observe(el);
@@ -456,7 +518,7 @@
 
         var mailto =
           "mailto:hr@elyvaro.com" +
-          "?subject=" + encodeURIComponent("[Elyvaro] " + subject) +
+          "?subject=" + encodeURIComponent("[Website] " + subject) +
           "&body=" + encodeURIComponent(body);
 
         setStatus("Opening your email app with the message ready to send…", true);

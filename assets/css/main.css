@@ -1,31 +1,31 @@
 /* ============================================================
-   Elyvaro design system v2 - "Warm Cinema"
-   TESO-inspired retail energy: warm cream grounds, ember/gold
-   accents, heavy display sans, brand-card grids, orbit carousel,
-   mouse-driven motion. Original palette + copy.
-   Shape: pill buttons, 6px cards/images, 18px clay panels.
+   Design system v3 - "Warm Cinema"
+   Palette: Olive + Brick + Paper. Heavy display sans, brand-card
+   grids, orbit carousel, mouse-driven motion. Original copy.
+   Shape: buttons + cards soft 12px, clay panels 18px, pill only
+   for badges/chips.
    ============================================================ */
 
 :root {
   /* color */
-  --cream: #f6efe3;
-  --cream-2: #efe4d2;
-  --paper: #fdfaf4;
-  --ink: #1e1814;
-  --ink-60: #5e5348;
-  --ink-45: #7a6e60;
-  --ember: #e04b26;
-  --ember-deep: #b93a1b;
-  --ember-soft: #f0743f;
-  --sun: #f2b33d;
-  --sun-deep: #d99a1f;
-  --berry: #c24d5c;
-  --berry-deep: #9e3a47;
-  --night: #1c1410;
-  --night-2: #2a1e17;
-  --line: rgba(30, 24, 20, 0.14);
-  --line-soft: rgba(30, 24, 20, 0.08);
-  --line-light: rgba(246, 239, 227, 0.16);
+  --cream: #f4f1e8;
+  --cream-2: #ebe6d9;
+  --paper: #fdfcf7;
+  --ink: #1a1a18;
+  --ink-60: #4a4944;
+  --ink-45: #6e6c66;
+  --ember: #b8492a;
+  --ember-deep: #8f3a20;
+  --ember-soft: #d4654a;
+  --sun: #c4a33a;
+  --sun-deep: #a68828;
+  --berry: #b3455a;
+  --berry-deep: #8e3448;
+  --night: #1e1c18;
+  --night-2: #2e2b24;
+  --line: rgba(26, 26, 24, 0.14);
+  --line-soft: rgba(26, 26, 24, 0.08);
+  --line-light: rgba(244, 241, 232, 0.16);
 
   /* type */
   --f: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -36,22 +36,23 @@
   --fs-small: 0.875rem;
 
   /* layout */
-  --wrap: 1320px;
+  --wrap: 1400px;
   --gut: clamp(20px, 4vw, 48px);
   --sec: clamp(72px, 10vw, 148px);
   --gap: clamp(20px, 3vw, 40px);
-  --nav-h: 64px;
+  --nav-h: 72px;
 
   /* shape */
-  --r-card: 6px;
+  --r-card: 12px;
   --r-clay: 18px;
   --r-pill: 999px;
 
   /* motion */
   --e: cubic-bezier(0.22, 1, 0.36, 1);
   --e-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --e-rev: cubic-bezier(0.4, 0.15, 0.3, 1);
   --t-fast: 0.28s;
-  --t: 0.7s;
+  --t: 0.8s;
 }
 
 @media (min-width: 900px) {
@@ -77,7 +78,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: clip;
+  /* overflow-x: clip; */
+  overflow-x:hidden;
 }
 
 /* cinematic grain */
@@ -455,19 +457,28 @@ p { max-width: 62ch; }
 
 .js .reveal {
   opacity: 0;
-  transform: translateY(52px);
-  transition: opacity 0.9s var(--e), transform 0.9s var(--e);
+  transform: translateY(64px);
+  transition: opacity 1s var(--e-rev), transform 1s var(--e-rev);
   transition-delay: var(--d, 0ms);
   will-change: opacity, transform;
 }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
-/* directional reveals (v2.2) */
-.js .reveal-l { opacity: 0; transform: translateX(-88px); transition: opacity 0.85s var(--e), transform 0.85s var(--e); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
-.js .reveal-r { opacity: 0; transform: translateX(88px); transition: opacity 0.85s var(--e), transform 0.85s var(--e); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
+/* directional reveals (v2.2, retuned v3.1 — visible mid-viewport motion) */
+.js .reveal-l { opacity: 0; transform: translateX(-112px); transition: opacity 0.95s var(--e-rev), transform 0.95s var(--e-rev); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
+.js .reveal-r { opacity: 0; transform: translateX(112px); transition: opacity 0.95s var(--e-rev), transform 0.95s var(--e-rev); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
 .js .reveal-l.is-in, .js .reveal-r.is-in { opacity: 1; transform: none; }
-.js .reveal-pop { opacity: 0; transform: scale(0.82) translateY(32px); transition: opacity 0.8s var(--e), transform 0.8s var(--e); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
+.js .reveal-pop { opacity: 0; transform: scale(0.78) translateY(36px); transition: opacity 0.92s var(--e-rev), transform 0.92s var(--e-rev); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
 .js .reveal-pop.is-in { opacity: 1; transform: none; }
+
+/* section-level fade+rise on scroll (v3.1) — composes with child transforms */
+.js .fade-io {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.05s var(--e-rev), transform 1.05s var(--e-rev);
+  transition-delay: var(--d, 0ms);
+}
+.js .fade-io.is-in { opacity: 1; transform: none; }
 
 /* staggered word morph (v2.2) */
 .js .morph { --d: 0ms; }
@@ -513,7 +524,7 @@ p { max-width: 62ch; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js .reveal, .js .reveal-l, .js .reveal-r, .js .reveal-pop { opacity: 1; transform: none; transition: none; }
+  .js .reveal, .js .reveal-l, .js .reveal-r, .js .reveal-pop, .js .fade-io { opacity: 1; transform: none; transition: none; }
   .js .morph .w > span { transform: none; opacity: 1; transition: none; }
   .js .clip img { clip-path: none; transition: none; }
   .js .rise, .js .rise-s, .js .float-y, .js .spin-slow { animation: none; }
@@ -526,7 +537,7 @@ p { max-width: 62ch; }
 
 .marquee {
   overflow: hidden;
-  padding-block: 18px;
+  padding-block: 8px;
   border-block: 1px solid var(--line);
   background: var(--cream-2);
   position: relative;
@@ -540,7 +551,7 @@ p { max-width: 62ch; }
   width: max-content;
   gap: 0;
   will-change: transform;
-  animation: marquee 28s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .marquee:hover .marquee__track { animation-play-state: paused; }
 
